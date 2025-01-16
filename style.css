@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.keys{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.keys .number{
+    flex: 1 1 calc(33.333% - 10px);
+    box-sizing: border-box;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.keys .operator{
+    flex: 1 1 calc(22.222% - 10px);
+    box-sizing: border-box;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.keys .calculo{
+    flex: 1;
+    box-sizing: border-box;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+div .screen {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    width: 900px;
+    height: 80px;
+    padding: 20px;
+}
+
