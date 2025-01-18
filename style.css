@@ -1,11 +1,23 @@
 body{
-    margin: 0;
+    padding: 0;
+    margin: 0;    
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.calculadora{
+    max-height: 60vw;
+    max-width: 40vw;
+    padding: 50px;
     background-color: beige;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    
+    border-radius: 5px;
+    box-shadow: 12px 3px 12px rgba(0, 0, 0, 0.342);
 }
 
 .keys{
@@ -21,6 +33,7 @@ body{
     background-color: azure;
     text-align: center;
     padding: 20px;
+    cursor: pointer;
     
 }
 
@@ -30,7 +43,7 @@ body{
     background-color: azure;
     text-align: center;
     padding: 20px;
-    
+    cursor: pointer;
 }
 
 .keys .calculo{
@@ -39,18 +52,19 @@ body{
     background-color: azure;
     text-align: center;
     padding: 20px;
-    
+    cursor: pointer;
 }
 
 div .screen {
+    padding: 30px;
+    height: 30vw;
     justify-content: center;
     display: flex;
     flex: 1;
     align-items: center;
     box-sizing: border-box;
     background-color: aliceblue;
-    width: 900px;
-    height: 80px;
-    padding: 20px;
+    width: 40vw;
+    margin-bottom: 30px;
 }
 
