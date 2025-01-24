@@ -72,14 +72,25 @@ body{
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.356);
 }
 
+.keys .clean{
+    flex: 1;
+    box-sizing: border-box;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.356);
+}
+
 div .screen {
+    font-size: 30px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.356);
     padding: 30px;
     height: 30vw;
-    justify-content: center;
+    justify-content: end;
     display: flex;
     flex: 1;
-    align-items: center;
+    align-items: end;
     box-sizing: border-box;
     background-color: aliceblue;
     width: 40vw;
