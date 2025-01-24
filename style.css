@@ -38,6 +38,20 @@ body{
     
 }
 
+.number:hover{
+    background-color: rgb(240, 244, 255);
+}
+
+.keys .operator:hover{
+    background-color: rgb(240, 244, 255);
+}
+
+.keys .calculo:hover{
+    background-color: rgb(240, 244, 255);
+}
+
+
+
 .keys .operator{
     flex: 1 1 calc(22.222% - 10px);
     box-sizing: border-box;
