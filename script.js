@@ -64,13 +64,11 @@ function oper(operador){
     }
     
     if (numberOne && operadorar && numberTwo) {
-        // Se já há um cálculo parcial, finalize antes de continuar
         solution(numberOne, numberTwo, operadorar);
-        numberOne = result.toString(); // Atualiza o primeiro número com o resultado
-        numberTwo = ""; // Reseta o segundo número
+        numberOne = result.toString(); 
+        numberTwo = ""; 
         calculoOk = false
     } else if (!numberOne) {
-        // Se não há um primeiro número, usa o número no visor como ponto de partida
         numberOne = tela.textContent;
     }
 
