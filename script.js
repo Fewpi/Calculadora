@@ -37,15 +37,17 @@ clear.addEventListener('click', () => {
     limpar()
 })
 
-function oper(operador){
-    indicador = true
-    operadorar = operador
-    tela.textContent = operadorar
-}
 
 function calculo(number){
+    if (calculoOk){
+        numberOne = result.toString()
+        numberTwo = ''
+        calculoOk = false
+        indicador = false
+    }
 
-    if(indicador === false){
+
+    if(!indicador){
         numberOne += (number.textContent)
         tela.textContent = numberOne
         }else{
@@ -54,13 +56,39 @@ function calculo(number){
         }
 }
 
+function oper(operador){
+    if(calculoOk){
+        numberOne = result.toString()
+        numberTwo = ''
+        calculoOk = false
+    }
+    
+    if (numberOne && operadorar && numberTwo) {
+        // Se já há um cálculo parcial, finalize antes de continuar
+        solution(numberOne, numberTwo, operadorar);
+        numberOne = result.toString(); // Atualiza o primeiro número com o resultado
+        numberTwo = ""; // Reseta o segundo número
+        calculoOk = false
+    } else if (!numberOne) {
+        // Se não há um primeiro número, usa o número no visor como ponto de partida
+        numberOne = tela.textContent;
+    }
+
+    console.log(numberOne, numberTwo)
+
+
+    indicador = true
+    operadorar = operador
+    tela.textContent = operadorar
+}
+
+
 
 function solution(numberOne, numberTwo, operadorar){
-    if(result !== null){
-   
+    
     numberOne = parseFloat(numberOne)
     numberTwo = parseFloat(numberTwo)
-
+    
     switch(operadorar){
         case "+":
             result = numberOne + numberTwo
@@ -72,21 +100,21 @@ function solution(numberOne, numberTwo, operadorar){
             result = numberOne * numberTwo
             break
         case "/":
-            result = numberOne / numberTwo
+            result = numberOne / numberTwo5
             break
     }
-  
     tela.textContent = result
+    indicador = false
+    calculoOk = true
     }
-
-}
 
 function limpar(){
     tela.textContent = 0
     numberOne = 0
     numberTwo = 0
     indicador = false
-    calculoOk = false   
+    calculoOk = false 
+    result = 0  
     calculo
 }
 
